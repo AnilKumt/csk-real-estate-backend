@@ -15,13 +15,13 @@ import {
   getAllCustomer_Purchased,
 } from "../controller/userController.js";
 import { authenticate } from "../middlewares/authMiddleware.js";
-import { getLoggedInUser } from "../../../../../real-estate/src/controller/userController.js";
+//import { getLoggedInUser } from "../controller/userController.js";
 
 const router = express.Router();
 
 router.post("/addUser", createUser);
 router.get("/getUsers", authenticate, getAllUsers);
-router.get("/getLoggedInUser", authenticate, getLoggedInUser);
+//router.get("/getLoggedInUser", authenticate, getLoggedInUser);
 router.get("/getRole/:userId", getUserWithRole);
 router.post("/login", loginUser);
 router.post("/updateUser", updateUser);
